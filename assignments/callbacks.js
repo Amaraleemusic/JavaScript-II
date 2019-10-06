@@ -6,9 +6,9 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
   // GIVEN THIS PROBLEM:
 
-  function firstItem(arr, cb) {
-    // firstItem passes the first item of the given array to the callback function.
-  }
+  // function firstItem(arr, cb) {
+  //   // firstItem passes the first item of the given array to the callback function.
+  // }
 
   // SOLUTION:
 

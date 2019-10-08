@@ -2,7 +2,7 @@
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
-/* 
+
 
   // GIVEN THIS PROBLEM:
 
@@ -12,10 +12,15 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
   // SOLUTION:
 
+  //function logExorbitantPrice(article) {
+   // return `this ${article} is worth a million dollars!`;
+  //};
+
   function firstItem(arr, cb) {
     return cb(arr[0]);
   }
 
+ 
   // NOTES ON THE SOLUTION:
 
   // firstItem is a higher order function.
@@ -36,28 +41,38 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
   const test2 = firstItem(items, logExorbitantPrice);
   console.log(test2); // "this Pencil is worth a million dollars!"
-*/
+
 
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  let ArrLength = arr.length;
+  return cb(ArrLength)
 }
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  let last = items[items.length - 1];
+  return cb(last)
+
 }
 
 function sumNums(x, y, cb) {
+  return cb(x + y)
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb( x * y)
 }
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  if(list.includes(item)) {
+    return cb(true);
+  } else return cb(false)
 }
 
 /* STRETCH PROBLEM */
